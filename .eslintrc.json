@@ -1,0 +1,27 @@
+{
+  "extends": "airbnb-base",
+  "parser": "@babel/eslint-parser",
+  "env": {
+     "es6": true,
+     "browser": true,
+     "jest": true
+  },
+  "rules": {
+    "no-restricted-syntax": [
+      "error",
+      "LabeledStatement",
+      "WithStatement"
+    ],
+    "import/extensions": "off",
+    "max-len": "off",
+    "no-mixed-operators": "off",
+    "no-alert": "off",
+    "default-case": "off",
+    "no-await-in-loop": "off",
+    "no-param-reassign": "off",
+    "no-plusplus": "off",
+    "new-cap": "off",
+    "no-underscore-dangle": "off",
+    "func-names": "off"
+  }
+}
