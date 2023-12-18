@@ -8,10 +8,6 @@ export default class Undead extends Character {
     this.moveRange = 4;
     this.attackRange = 1;
 
-    if (level > 1) {
-      for (let i = 1; i < level; i++) {
-        this.levelUp();
-      }
-    }
+    this.levelUp(level);
   }
 }

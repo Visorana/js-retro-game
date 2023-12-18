@@ -28,10 +28,12 @@ export default class Character {
   /**
    * Level up the character, increasing defence, attack, and health attributes.
    */
-  levelUp() {
-    this.defence = Math.round(Math.max(this.defence, this.defence * (80 + this.health)) / 100);
-    this.attack = Math.round(Math.max(this.attack, this.attack * (80 + this.health)) / 100);
-    this.health = Math.min(this.health + 80, 100);
+  levelUp(level) {
+    for (let i = 1; i < level; i++) {
+      this.defence = Math.round(Math.max(this.defence, this.defence * (80 + this.health)) / 100);
+      this.attack = Math.round(Math.max(this.attack, this.attack * (80 + this.health)) / 100);
+      this.health = Math.min(this.health + 80, 100);
+    }
   }
 
   /**

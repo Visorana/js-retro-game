@@ -18,8 +18,8 @@ export default class GameController {
     this.stateService = stateService;
     this.userTeam = new Team();
     this.botTeam = new Team();
-    this.userCharacters = [Swordsman];
-    this.botCharacters = [Daemon];
+    this.userCharacters = [Swordsman, Bowman, Magician];
+    this.botCharacters = [Daemon, Undead, Vampire];
     this.gameState = new GameState();
   }
 
@@ -341,7 +341,7 @@ export default class GameController {
     if (this.gameState.level <= 4) {
       this.userTeam.characters.forEach((char) => {
         char.level++;
-        char.levelUp();
+        char.levelUp(2);
       });
       if (this.gameState.level === 2) {
         this.userTeam.addAll(generateTeam(this.userCharacters, 1, 3 - this.userTeam.characters.size));
